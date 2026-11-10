@@ -793,6 +793,10 @@ body.cursor-hot #cursor-ring{ width:56px; height:56px; border-color:rgba(56,189,
   width:11px; height:11px; border-radius:50%;
   background:var(--acc-glow); transform:scale(0); position:relative; z-index:2;
   box-shadow:0 0 0 4px var(--ink), 0 0 12px var(--acc);
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1), background .25s ease;
+}
+.timeline-dot.is-reached{
+  transform:scale(1) !important;
 }
 .timeline-role{
   font-family:var(--display); font-weight:800;
@@ -811,9 +815,15 @@ body.cursor-hot #cursor-ring{ width:56px; height:56px; border-color:rgba(56,189,
   white-space:nowrap; padding-top:8px;
 }
 .timeline-progress{
-  position:absolute; width:1px; background:var(--line); z-index:1;
+  position:absolute; width:2px; background:var(--line); z-index:1;
+  transform:translateX(-50%);
 }
-.timeline-progress-fill{ width:100%; height:0; background:var(--acc); opacity:.65; }
+.timeline-progress-fill{
+  width:100%; height:0;
+  background:linear-gradient(to bottom, var(--acc), var(--acc-glow));
+  box-shadow:0 0 10px rgba(56,189,248,.55);
+  opacity:.95;
+}
 
 /* ---------- Contact ---------- */
 .contact-grid{

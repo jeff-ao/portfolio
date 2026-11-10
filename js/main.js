@@ -456,38 +456,44 @@
       });
     }
 
-    /* Timeline: continuous rule + dot pop-in */
+    /* Timeline: continuous rule + real-time scroll progress + dot pop-in */
     var list = document.getElementById('timeline-list');
     if (list) {
       var trackEl = list.querySelector('.timeline-progress');
       var fillEl = list.querySelector('.timeline-progress-fill');
-      var dots = list.querySelectorAll('.timeline-dot');
+      var items = Array.prototype.slice.call(list.querySelectorAll('.timeline-item'));
+      var dots = Array.prototype.slice.call(list.querySelectorAll('.timeline-dot'));
 
-      if (trackEl && fillEl && dots.length) {
-        var position = function () {
-          var listBox = list.getBoundingClientRect();
-          var first = dots[0].getBoundingClientRect();
-          var last = dots[dots.length - 1].getBoundingClientRect();
-          trackEl.style.left = (first.left + first.width / 2 - listBox.left) + 'px';
-          trackEl.style.top = (first.top + first.height / 2 - listBox.top) + 'px';
-          trackEl.style.height = Math.max(0, (last.top + last.height / 2) - (first.top + first.height / 2)) + 'px';
-        };
-        var settle = function () { requestAnimationFrame(function () { requestAnimationFrame(position); }); };
-        settle();
-        if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle);
-        window.addEventListener('load', function () { settle(); ScrollTrigger.refresh(); });
-        window.addEventListener('resize', settle);
+      if (trackEl && fillEl && items.length && dots.length) {
+        var updateTimeline = function () {
+          var firstOffset = items[0].offsetTop + 11.5;
+          var lastOffset = items[items.length - 1].offsetTop + 11.5;
+          var totalHeight = Math.max(0, lastOffset - firstOffset);
 
-        gsap.to(fillEl, {
-          height: '100%', ease: 'none',
-          scrollTrigger: { trigger: trackEl, start: 'top 78%', end: 'bottom 78%', scrub: 0.5 }
-        });
-        dots.forEach(function (dot) {
-          gsap.to(dot, {
-            scale: 1, duration: 0.5, ease: 'back.out(2.4)',
-            scrollTrigger: { trigger: dot, start: 'top 88%' }
+          trackEl.style.left = '17px';
+          trackEl.style.top = firstOffset + 'px';
+          trackEl.style.height = totalHeight + 'px';
+
+          var listRect = list.getBoundingClientRect();
+          var firstDotViewportY = listRect.top + firstOffset;
+          var triggerY = window.innerHeight * 0.68;
+
+          var currentPx = Math.max(0, Math.min(totalHeight, triggerY - firstDotViewportY));
+          fillEl.style.height = currentPx.toFixed(1) + 'px';
+
+          items.forEach(function (item, idx) {
+            var dotDist = (item.offsetTop + 11.5) - firstOffset;
+            var reached = (idx === 0 && triggerY >= firstDotViewportY - 24) || (currentPx >= dotDist - 4);
+            if (dots[idx]) dots[idx].classList.toggle('is-reached', reached);
           });
-        });
+        };
+
+        window.refreshPortfolioTimeline = updateTimeline;
+        updateTimeline();
+        window.addEventListener('scroll', updateTimeline, { passive: true });
+        window.addEventListener('resize', updateTimeline);
+        window.addEventListener('load', updateTimeline);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateTimeline);
       }
     }
 

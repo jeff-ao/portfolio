@@ -105,6 +105,9 @@
     });
 
     decorateInternalLinks(lang);
+    if (isDynamicToggle && window.refreshPortfolioTimeline) {
+      window.refreshPortfolioTimeline();
+    }
   }
 
   var currentLang = detectInitialLang();
