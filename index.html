@@ -1,348 +1,412 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeffson Luiz — Desenvolvedor Full Stack | TypeScript, Node.js &amp; React</title>
-<meta name="description" content="Jeffson Luiz — Desenvolvedor Full Stack focado em JavaScript e TypeScript, APIs escaláveis em Node.js/Express/Nest.js, Clean Architecture, React e Next.js.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeffson Luiz — Desenvolvedor Full Stack | TypeScript, Node.js &amp; React</title>
+  <meta name="description"
+    content="Jeffson Luiz — Desenvolvedor Full Stack focado em JavaScript e TypeScript, APIs escaláveis em Node.js/Express/Nest.js, Clean Architecture, React e Next.js.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Montserrat:wght@800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body data-page="home" data-title-en="Jeffson Luiz — Full Stack Developer | TypeScript, Node.js &amp; React">
 
-<div class="grain"></div>
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-<div class="scroll-progress"><div class="scroll-progress-fill"></div></div>
-
-<!-- ============ NAV ============ -->
-<nav class="nav" id="site-nav">
-  <a class="nav-logo" href="index.html" data-page="home" data-transition>
-    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
-  </a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html" data-page="home" data-transition>/home</a></li>
-    <li><a href="#work">/work</a></li>
-    <li><a href="#experience">/experience</a></li>
-    <li><a href="about.html" data-page="about" data-transition>/about</a></li>
-    <li><a href="contact.html" data-page="contact" data-transition>/contact</a></li>
-    <li>
-      <button type="button" class="lang-switch" aria-label="Switch language">
-        <span data-lang-opt="pt" class="is-active">PT</span>
-        <span class="sep">/</span>
-        <span data-lang-opt="en">EN</span>
-      </button>
-    </li>
-    <li>
-      <a class="nav-cta" href="mailto:jeffsonluiz11@gmail.com" data-en="Let's talk →">Vamos conversar →</a>
-    </li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- ============ HERO ============ -->
-<div class="hero-wrap">
-  <header class="hero">
-    <div class="hero-bg">
-      <img src="images/hero-portrait-bleed.png" alt="Retrato de Jeffson Luiz">
-    </div>
-    <div class="hero-veil"></div>
-    <div class="hero-rule"></div>
-
-    <div class="hero-status" data-hero-fade>
-      <i class="dot"></i><span data-en="Available for projects &amp; opportunities">Disponível para projetos &amp; oportunidades</span>
-    </div>
-
-    <div class="hero-place" data-hero-fade>João Pessoa · Brasil · 2026</div>
-
-    <div class="hero-inner">
-      <span class="mask"><span class="hero-kicker" style="display:block;">Jeffson</span></span>
-      <span class="mask"><span class="hero-name" style="display:block;">Luiz</span></span>
-
-      <div class="hero-tag">
-        <i class="bar"></i>
-        <span data-en="Full Stack Developer · TypeScript · <b>Node &amp; React</b>">Full Stack Developer · TypeScript · <b>Node &amp; React</b></span>
-      </div>
-
-      <p class="hero-blurb" data-en="Full Stack Developer focused on JavaScript and TypeScript, building high-volume scalable APIs in Node.js/Express with Clean Architecture, Prisma ORM, Redis caching, and responsive interfaces in React &amp; Next.js.">
-        Desenvolvedor Full Stack focado em JavaScript e TypeScript, com experiência na criação de APIs escaláveis em Node.js/Express, Clean Architecture, Prisma ORM, cache com Redis e interfaces responsivas em React e Next.js.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="cv/jeffsonluiz-cv.pdf" download data-en="Download CV ↓">Baixar CV ↓</a>
-        <a class="btn btn-ghost" href="#work" data-en="/view work">/ver projetos</a>
-      </div>
-    </div>
-
-    <div class="hero-scroll" data-hero-fade>
-      <span>scroll</span><i></i>
-    </div>
-  </header>
-</div>
-
-<!-- ============ MARQUEE (TECH & SKILLS) ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>TypeScript</span><span>//</span><span>Node.js</span><span>//</span>
-    <span>React</span><span>//</span><span>Next.js</span><span>//</span>
-    <span>Nest.js</span><span>//</span><span>Clean Architecture</span><span>//</span>
-    <span>Prisma ORM</span><span>//</span><span>Redis Cache</span><span>//</span>
-    <span>PostgreSQL</span><span>//</span><span>Docker &amp; AWS</span><span>//</span>
-    <span>TDD &amp; Jest</span><span>//</span><span>SOLID</span><span>//</span>
-    <span>TypeScript</span><span>//</span><span>Node.js</span><span>//</span>
-    <span>React</span><span>//</span><span>Next.js</span><span>//</span>
-    <span>Nest.js</span><span>//</span><span>Clean Architecture</span><span>//</span>
-    <span>Prisma ORM</span><span>//</span><span>Redis Cache</span><span>//</span>
-    <span>PostgreSQL</span><span>//</span><span>Docker &amp; AWS</span><span>//</span>
-    <span>TDD &amp; Jest</span><span>//</span><span>SOLID</span><span>//</span>
+  <div class="grain"></div>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div class="scroll-progress">
+    <div class="scroll-progress-fill"></div>
   </div>
-</div>
 
-<!-- ============ STATS ============ -->
-<section class="stats section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">/numbers</span>
-      <h2 class="h-display h-lg" data-split data-en="By the <span class=&quot;outline&quot;>numbers</span>">Impacto em <span class="outline">números</span></h2>
-    </div>
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="site-nav">
+    <a class="nav-logo" href="index.html" data-page="home" data-transition>
+      <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" data-page="home" data-transition>/home</a></li>
+      <li><a href="#work">/work</a></li>
+      <li><a href="#experience">/experience</a></li>
+      <li><a href="about.html" data-page="about" data-transition>/about</a></li>
+      <li><a href="contact.html" data-page="contact" data-transition>/contact</a></li>
+      <li>
+        <button type="button" class="lang-switch" aria-label="Switch language">
+          <span data-lang-opt="pt" class="is-active">PT</span>
+          <span class="sep">/</span>
+          <span data-lang-opt="en">EN</span>
+        </button>
+      </li>
+      <li>
+        <a class="nav-cta" href="mailto:jeffsonluiz11@gmail.com" data-en="Let's talk →">Vamos conversar →</a>
+      </li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <div class="stats-grid">
-      <div class="stat fade-up">
-        <div class="stat-number" data-value="5" data-suffix="K+">5K+</div>
-        <div class="stat-label" data-en="Daily sales supported">Vendas diárias suportadas</div>
-        <p class="stat-desc" data-en="Layered APIs (Clean Architecture / OOP) built with TypeScript, Express, Prisma and Redis to handle high-volume physical and digital transactions.">APIs estruturadas em camadas (Clean Architecture / POO) com TypeScript, Express, Prisma e Redis para suportar alto volume de transações físicas e digitais.</p>
+  <!-- ============ HERO ============ -->
+  <div class="hero-wrap">
+    <header class="hero">
+      <div class="hero-bg">
+        <img src="images/hero-portrait-bleed.png?v=2" alt="Retrato de Jeffson Luiz">
       </div>
-      <div class="stat fade-up">
-        <div class="stat-number" data-value="10" data-suffix="+">10+</div>
-        <div class="stat-label" data-en="Production technologies">Tecnologias em produção</div>
-        <p class="stat-desc" data-en="Full Stack mastery across JavaScript, TypeScript, Node.js, Express, Nest.js, React, Next.js, PostgreSQL, MySQL, Redis, Docker, GitHub Actions and AWS.">Domínio Full Stack cobrindo JavaScript, TypeScript, Node.js, Express, Nest.js, React, Next.js, PostgreSQL, MySQL, Redis, Docker, GitHub Actions e AWS.</p>
+      <div class="hero-veil"></div>
+      <div class="hero-rule"></div>
+
+      <div class="hero-status" data-hero-fade>
+        <i class="dot"></i><span data-en="Available for projects &amp; opportunities">Disponível para projetos &amp;
+          oportunidades</span>
       </div>
-      <div class="stat fade-up">
-        <div class="stat-number" data-value="100" data-suffix="%">100%</div>
-        <div class="stat-label" data-en="Clean Code, TDD &amp; CI/CD">Clean Code, TDD &amp; CI/CD</div>
-        <p class="stat-desc" data-en="Automated pipelines with GitHub Actions and Jest unit tests on every PR, preventing regressions before AWS deployment.">Pipelines automatizados no GitHub Actions com testes unitários em Jest a cada PR, garantindo qualidade e zero regressões antes do deploy na AWS.</p>
+
+      <div class="hero-place" data-hero-fade>João Pessoa · Brasil · 2026</div>
+
+      <div class="hero-inner">
+        <span class="mask"><span class="hero-kicker" style="display:block;">Jeffson</span></span>
+        <span class="mask"><span class="hero-name" style="display:block;">Luiz</span></span>
+
+        <div class="hero-tag">
+          <i class="bar"></i>
+          <span data-en="Full Stack Developer · TypeScript · <b>Node &amp; React</b>">Full Stack Developer · TypeScript
+            · <b>Node &amp; React</b></span>
+        </div>
+
+        <p class="hero-blurb"
+          data-en="Full Stack Developer focused on JavaScript and TypeScript, building high-volume scalable APIs in Node.js/Express with Clean Architecture, Prisma ORM, Redis caching, and responsive interfaces in React &amp; Next.js.">
+          Desenvolvedor Full Stack focado em JavaScript e TypeScript, com experiência na criação de APIs escaláveis em
+          Node.js/Express, Clean Architecture, Prisma ORM, cache com Redis e interfaces responsivas em React e Next.js.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="cv/jeffsonluiz-cv.pdf" download data-en="Download CV ↓">Baixar CV ↓</a>
+          <a class="btn btn-ghost" href="#work" data-en="/view work">/ver projetos</a>
+        </div>
       </div>
+
+      <div class="hero-scroll" data-hero-fade>
+        <span>scroll</span><i></i>
+      </div>
+    </header>
+  </div>
+
+  <!-- ============ MARQUEE (TECH & SKILLS) ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>TypeScript</span><span>//</span><span>Node.js</span><span>//</span>
+      <span>React</span><span>//</span><span>Next.js</span><span>//</span>
+      <span>Nest.js</span><span>//</span><span>Clean Architecture</span><span>//</span>
+      <span>Prisma ORM</span><span>//</span><span>Redis Cache</span><span>//</span>
+      <span>PostgreSQL</span><span>//</span><span>Docker &amp; AWS</span><span>//</span>
+      <span>TDD &amp; Jest</span><span>//</span><span>SOLID</span><span>//</span>
+      <span>TypeScript</span><span>//</span><span>Node.js</span><span>//</span>
+      <span>React</span><span>//</span><span>Next.js</span><span>//</span>
+      <span>Nest.js</span><span>//</span><span>Clean Architecture</span><span>//</span>
+      <span>Prisma ORM</span><span>//</span><span>Redis Cache</span><span>//</span>
+      <span>PostgreSQL</span><span>//</span><span>Docker &amp; AWS</span><span>//</span>
+      <span>TDD &amp; Jest</span><span>//</span><span>SOLID</span><span>//</span>
     </div>
   </div>
-</section>
 
-<!-- ============ SELECTED CASES (horizontal) ============ -->
-<section class="pin-wrap" id="work">
-  <div class="pin-stage">
-    <div class="pin-head">
-      <div>
-        <span class="eyebrow">/work</span>
-        <h2 class="h-display h-lg" data-en="Selected <span class=&quot;outline&quot;>cases</span>">Projetos em <span class="outline">destaque</span></h2>
+  <!-- ============ STATS ============ -->
+  <section class="stats section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">/numbers</span>
+        <h2 class="h-display h-lg" data-split data-en="By the <span class=&quot;outline&quot;>numbers</span>">Impacto em
+          <span class="outline">números</span></h2>
       </div>
-      <div class="pin-dots">
-        <i class="on"></i><i></i><i></i>
-        <span class="pin-count">01 / 03</span>
+
+      <div class="stats-grid">
+        <div class="stat fade-up">
+          <div class="stat-number" data-value="5" data-suffix="K+">5K+</div>
+          <div class="stat-label" data-en="Daily sales supported">Vendas diárias suportadas</div>
+          <p class="stat-desc"
+            data-en="Layered APIs (Clean Architecture / OOP) built with TypeScript, Express, Prisma and Redis to handle high-volume physical and digital transactions.">
+            APIs estruturadas em camadas (Clean Architecture / POO) com TypeScript, Express, Prisma e Redis para
+            suportar alto volume de transações físicas e digitais.</p>
+        </div>
+        <div class="stat fade-up">
+          <div class="stat-number" data-value="10" data-suffix="+">10+</div>
+          <div class="stat-label" data-en="Production technologies">Tecnologias em produção</div>
+          <p class="stat-desc"
+            data-en="Full Stack mastery across JavaScript, TypeScript, Node.js, Express, Nest.js, React, Next.js, PostgreSQL, MySQL, Redis, Docker, GitHub Actions and AWS.">
+            Domínio Full Stack cobrindo JavaScript, TypeScript, Node.js, Express, Nest.js, React, Next.js, PostgreSQL,
+            MySQL, Redis, Docker, GitHub Actions e AWS.</p>
+        </div>
+        <div class="stat fade-up">
+          <div class="stat-number" data-value="100" data-suffix="%">100%</div>
+          <div class="stat-label" data-en="Clean Code, TDD &amp; CI/CD">Clean Code, TDD &amp; CI/CD</div>
+          <p class="stat-desc"
+            data-en="Automated pipelines with GitHub Actions and Jest unit tests on every PR, preventing regressions before AWS deployment.">
+            Pipelines automatizados no GitHub Actions com testes unitários em Jest a cada PR, garantindo qualidade e
+            zero regressões antes do deploy na AWS.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="htrack">
-
-      <a class="hcard on" href="case-pagmus.html" data-transition>
-        <div class="hcard-bg"><img src="images/bg-pagmus.svg" alt=""></div>
-        <img class="hcard-device" src="images/device-pagmus.svg" alt="Arquitetura e Kanban em tempo real da Pagmus">
-        <div class="hcard-accent"></div>
-        <div class="hcard-num" aria-hidden="true">01</div>
-        <div class="hcard-body">
-          <div class="hcard-meta">
-            <span class="idx">01</span><i class="sep"></i>
-            <span class="cat" data-en="Full Stack Developer · High-Volume Fintech">Desenvolvedor Full Stack · Fintech de Alta Escala</span>
-          </div>
-          <h3 class="hcard-name">Pagmus</h3>
-          <p class="hcard-tagline" data-en="Scaling payment &amp; digital marketing APIs to 5,000+ daily sales.">Escalando APIs de pagamentos e marketing digital para até 5.000 vendas diárias.</p>
-          <p class="hcard-desc" data-en="Clean Architecture in TypeScript/Express, financial &amp; logistics integrations (Pagar.me, Bling, Notazz, Correios), real-time Kanban tracking, and N+1 query elimination with Prisma + Redis.">Arquitetura em camadas (Clean Architecture) com TypeScript/Express, conciliação financeira e logística (Pagar.me, Bling, Notazz e Correios), Kanban em tempo real e otimização Prisma + Redis.</p>
-          <div class="hcard-tags">
-            <span>TypeScript</span><span>Node.js</span><span>Clean Architecture</span>
-            <span>Prisma ORM</span><span>Redis</span><span>AWS</span>
-          </div>
-          <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
+  <!-- ============ SELECTED CASES (horizontal) ============ -->
+  <section class="pin-wrap" id="work">
+    <div class="pin-stage">
+      <div class="pin-head">
+        <div>
+          <span class="eyebrow">/work</span>
+          <h2 class="h-display h-lg" data-en="Selected <span class=&quot;outline&quot;>cases</span>">Projetos em <span
+              class="outline">destaque</span></h2>
         </div>
-        <div class="hcard-year" data-en="Jul 2025 — Present">Jul 2025 — Presente</div>
-      </a>
-
-      <a class="hcard" href="case-siga.html" data-transition>
-        <div class="hcard-bg"><img src="images/bg-siga.svg" alt=""></div>
-        <img class="hcard-device" src="images/device-siga.svg" alt="Plataforma SaaS SIGA de conformidade NR-1 e dashboards de RH">
-        <div class="hcard-accent"></div>
-        <div class="hcard-num" aria-hidden="true">02</div>
-        <div class="hcard-body">
-          <div class="hcard-meta">
-            <span class="idx">02</span><i class="sep"></i>
-            <span class="cat" data-en="Frontend Developer · HR SaaS &amp; NR-1">Desenvolvedor Frontend · SaaS de RH &amp; NR-1</span>
-          </div>
-          <h3 class="hcard-name">SIGA</h3>
-          <p class="hcard-tagline" data-en="Frictionless QR Code onboarding and analytical HR dashboards for NR-1 compliance.">Onboarding via QR Code sem fricção e dashboards analíticos de RH para conformidade NR-1.</p>
-          <p class="hcard-desc" data-en="Built a responsive no-auth landing page (React/Tailwind) eliminating manual UUIDs, redesigned the smart anamnesis form with auto-advance, and delivered 4 mobile-first analytical dashboards.">Criação de landing page no-auth responsiva (React/Tailwind) eliminando UUIDs manuais, redesenho do formulário de anamnese com avanço automático e 4 dashboards analíticos mobile-first.</p>
-          <div class="hcard-tags">
-            <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
-            <span>UX Optimization</span><span>REST APIs</span><span>Dashboards</span>
-          </div>
-          <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
+        <div class="pin-dots">
+          <i class="on"></i><i></i><i></i>
+          <span class="pin-count">01 / 03</span>
         </div>
-        <div class="hcard-year" data-en="May 2025 — Mar 2026">Mai 2025 — Mar 2026</div>
-      </a>
-
-      <a class="hcard" href="case-mentoria.html" data-transition>
-        <div class="hcard-bg"><img src="images/bg-mentoria.svg" alt=""></div>
-        <img class="hcard-device" src="images/device-mentoria.svg" alt="Mentoria e Treinamento Prático Full Stack">
-        <div class="hcard-accent"></div>
-        <div class="hcard-num" aria-hidden="true">03</div>
-        <div class="hcard-body">
-          <div class="hcard-meta">
-            <span class="idx">03</span><i class="sep"></i>
-            <span class="cat" data-en="Full Stack Instructor &amp; Mentor · Technical Leadership">Instrutor &amp; Mentor Full Stack · Liderança Técnica</span>
-          </div>
-          <h3 class="hcard-name" data-en="Tech Mentorship">Mentoria Tech</h3>
-          <p class="hcard-tagline" data-en="Live training in Algorithms (LeetCode), Clean Code, TDD and Git Flow with Node.js.">Treinamento prático ao vivo em Algoritmos (LeetCode), Clean Code, TDD e Git Flow com Node.js.</p>
-          <p class="hcard-desc" data-en="Led live cohorts of 6 to 9 developers focusing on software engineering fundamentals, TypeScript, automated testing and real-world workflows — directly helping 2 mentees land internships.">Condução de turmas ao vivo (6 a 9 alunos) focadas em engenharia de software, TypeScript, testes automatizados e fluxo real de equipe — apoiando diretamente 2 mentorados na conquista de estágios.</p>
-          <div class="hcard-tags">
-            <span>LeetCode</span><span>Clean Code</span><span>TypeScript</span>
-            <span>TDD &amp; Jest</span><span>Git Flow</span><span>Node.js</span>
-          </div>
-          <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
-        </div>
-        <div class="hcard-year">2025 — 2026</div>
-      </a>
-
-    </div>
-
-    <div class="pin-hint">
-      <span data-en="scroll to explore">role para explorar</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARQUEE 2 ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Pagmus</span><span>//</span><span>SIGA SaaS</span><span>//</span>
-    <span>Pagar.me</span><span>//</span><span>Bling &amp; Notazz</span><span>//</span>
-    <span>UNIPÊ</span><span>//</span><span>João Pessoa · PB</span><span>//</span>
-    <span>Pagmus</span><span>//</span><span>SIGA SaaS</span><span>//</span>
-    <span>Pagar.me</span><span>//</span><span>Bling &amp; Notazz</span><span>//</span>
-    <span>UNIPÊ</span><span>//</span><span>João Pessoa · PB</span><span>//</span>
-  </div>
-</div>
-
-<!-- ============ EXPERIENCE (sticky stack) ============ -->
-<section class="stack-wrap" id="experience">
-  <div class="stack-stage">
-    <div class="stack-head">
-      <div>
-        <span class="eyebrow">/experience</span>
-        <h2 class="h-display h-lg" data-en="Work <span class=&quot;outline&quot;>history</span>">Trajetória <span class="outline">profissional</span></h2>
       </div>
-      <p class="lede" style="max-width:38ch; font-size:13px;" data-en="Building high-availability backends, responsive SaaS interfaces and mentoring developers.">
-        Construindo backends de alta disponibilidade, interfaces SaaS responsivas e formando desenvolvedores.
-      </p>
+
+      <div class="htrack">
+
+        <a class="hcard on" href="case-pagmus.html" data-transition>
+          <div class="hcard-bg"><img src="images/bg-pagmus.svg" alt=""></div>
+          <img class="hcard-device" src="images/device-pagmus.svg" alt="Arquitetura e Kanban em tempo real da Pagmus">
+          <div class="hcard-accent"></div>
+          <div class="hcard-num" aria-hidden="true">01</div>
+          <div class="hcard-body">
+            <div class="hcard-meta">
+              <span class="idx">01</span><i class="sep"></i>
+              <span class="cat" data-en="Full Stack Developer · High-Volume Fintech">Desenvolvedor Full Stack · Fintech
+                de Alta Escala</span>
+            </div>
+            <h3 class="hcard-name">Pagmus</h3>
+            <p class="hcard-tagline" data-en="Scaling payment &amp; digital marketing APIs to 5,000+ daily sales.">
+              Escalando APIs de pagamentos e marketing digital para até 5.000 vendas diárias.</p>
+            <p class="hcard-desc"
+              data-en="Clean Architecture in TypeScript/Express, financial &amp; logistics integrations (Pagar.me, Bling, Notazz, Correios), real-time Kanban tracking, and N+1 query elimination with Prisma + Redis.">
+              Arquitetura em camadas (Clean Architecture) com TypeScript/Express, conciliação financeira e logística
+              (Pagar.me, Bling, Notazz e Correios), Kanban em tempo real e otimização Prisma + Redis.</p>
+            <div class="hcard-tags">
+              <span>TypeScript</span><span>Node.js</span><span>Clean Architecture</span>
+              <span>Prisma ORM</span><span>Redis</span><span>AWS</span>
+            </div>
+            <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
+          </div>
+          <div class="hcard-year" data-en="Jul 2025 — Present">Jul 2025 — Presente</div>
+        </a>
+
+        <a class="hcard" href="case-siga.html" data-transition>
+          <div class="hcard-bg"><img src="images/bg-siga.svg" alt=""></div>
+          <img class="hcard-device" src="images/device-siga.svg"
+            alt="Plataforma SaaS SIGA de conformidade NR-1 e dashboards de RH">
+          <div class="hcard-accent"></div>
+          <div class="hcard-num" aria-hidden="true">02</div>
+          <div class="hcard-body">
+            <div class="hcard-meta">
+              <span class="idx">02</span><i class="sep"></i>
+              <span class="cat" data-en="Frontend Developer · HR SaaS &amp; NR-1">Desenvolvedor Frontend · SaaS de RH
+                &amp; NR-1</span>
+            </div>
+            <h3 class="hcard-name">SIGA</h3>
+            <p class="hcard-tagline"
+              data-en="Frictionless QR Code onboarding and analytical HR dashboards for NR-1 compliance.">Onboarding via
+              QR Code sem fricção e dashboards analíticos de RH para conformidade NR-1.</p>
+            <p class="hcard-desc"
+              data-en="Built a responsive no-auth landing page (React/Tailwind) eliminating manual UUIDs, redesigned the smart anamnesis form with auto-advance, and delivered 4 mobile-first analytical dashboards.">
+              Criação de landing page no-auth responsiva (React/Tailwind) eliminando UUIDs manuais, redesenho do
+              formulário de anamnese com avanço automático e 4 dashboards analíticos mobile-first.</p>
+            <div class="hcard-tags">
+              <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+              <span>UX Optimization</span><span>REST APIs</span><span>Dashboards</span>
+            </div>
+            <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
+          </div>
+          <div class="hcard-year" data-en="May 2025 — Mar 2026">Mai 2025 — Mar 2026</div>
+        </a>
+
+        <a class="hcard" href="case-mentoria.html" data-transition>
+          <div class="hcard-bg"><img src="images/bg-mentoria.svg" alt=""></div>
+          <img class="hcard-device" src="images/device-mentoria.svg" alt="Mentoria e Treinamento Prático Full Stack">
+          <div class="hcard-accent"></div>
+          <div class="hcard-num" aria-hidden="true">03</div>
+          <div class="hcard-body">
+            <div class="hcard-meta">
+              <span class="idx">03</span><i class="sep"></i>
+              <span class="cat" data-en="Full Stack Instructor &amp; Mentor · Technical Leadership">Instrutor &amp;
+                Mentor Full Stack · Liderança Técnica</span>
+            </div>
+            <h3 class="hcard-name" data-en="Tech Mentorship">Mentoria Tech</h3>
+            <p class="hcard-tagline"
+              data-en="Live training in Algorithms (LeetCode), Clean Code, TDD and Git Flow with Node.js.">Treinamento
+              prático ao vivo em Algoritmos (LeetCode), Clean Code, TDD e Git Flow com Node.js.</p>
+            <p class="hcard-desc"
+              data-en="Led live cohorts of 6 to 9 developers focusing on software engineering fundamentals, TypeScript, automated testing and real-world workflows — directly helping 2 mentees land internships.">
+              Condução de turmas ao vivo (6 a 9 alunos) focadas em engenharia de software, TypeScript, testes
+              automatizados e fluxo real de equipe — apoiando diretamente 2 mentorados na conquista de estágios.</p>
+            <div class="hcard-tags">
+              <span>LeetCode</span><span>Clean Code</span><span>TypeScript</span>
+              <span>TDD &amp; Jest</span><span>Git Flow</span><span>Node.js</span>
+            </div>
+            <span class="hcard-go" data-en="Read case <i>↗</i>">Ver estudo de caso <i>↗</i></span>
+          </div>
+          <div class="hcard-year">2025 — 2026</div>
+        </a>
+
+      </div>
+
+      <div class="pin-hint">
+        <span data-en="scroll to explore">role para explorar</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </div>
     </div>
+  </section>
 
-    <div class="stack-area">
-
-      <article class="stack-item on">
-        <div class="stack-card">
-          <div class="stack-num">01</div>
-          <div>
-            <div class="stack-title">
-              <h3>Pagmus</h3>
-              <span class="role" data-en="Full Stack Developer">Desenvolvedor Full Stack</span>
-            </div>
-            <p class="stack-desc" data-en="Digital marketing and payment platform intermediating infoproducts and physical goods. Architected layered APIs (Clean Architecture/OOP) in TypeScript/Express supporting up to 5,000 daily sales. Integrated Pagar.me, Bling, Notazz and Correios with real-time Kanban tracking, eliminated Prisma N+1 queries with Redis caching, and configured GitHub Actions CI/CD with Jest before AWS deployment.">Plataforma de pagamentos e marketing digital para infoprodutos e itens físicos. Estruturei APIs em camadas (Clean Architecture/POO) com TypeScript/Express suportando até 5.000 vendas diárias. Integrei Pagar.me, Bling, Notazz e Correios com Kanban em tempo real, eliminei queries N+1 no Prisma aplicando Redis para cache e configurei CI/CD no GitHub Actions com Jest antes do deploy na AWS.</p>
-            <div class="stack-tags">
-              <span>TypeScript</span><span>Express</span><span>Clean Architecture</span><span>Prisma</span><span>Redis</span><span>AWS</span>
-            </div>
-          </div>
-          <div class="stack-side">
-            <span class="stack-year" data-en="Jul 2025 — Present">Jul 2025 — Presente</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="stack-item">
-        <div class="stack-card">
-          <div class="stack-num">02</div>
-          <div>
-            <div class="stack-title">
-              <h3>SIGA</h3>
-              <span class="role" data-en="Frontend Developer">Desenvolvedor Frontend</span>
-            </div>
-            <p class="stack-desc" data-en="HR SaaS platform focused on NR-1 compliance and behavioral occupational risk analysis. Created a responsive no-auth landing page (React/Tailwind) for QR Code onboarding with direct app store links, redesigned the anamnesis form with auto-advance and retroactive editing, and developed 4 mobile-first analytical HR dashboards.">Plataforma SaaS de RH focada em conformidade com a NR-1 e análise comportamental de riscos ocupacionais. Criei landing page no-auth responsiva (React/Tailwind) para cadastro via QR Code eliminando cópia manual de UUIDs, redesenhei o formulário de anamnese com avanço automático e edição retroativa, e desenvolvi 4 dashboards analíticos mobile-first integrados a APIs.</p>
-            <div class="stack-tags">
-              <span>React</span><span>Tailwind CSS</span><span>UX/UI Flow</span><span>REST APIs</span><span>Mobile-First</span>
-            </div>
-          </div>
-          <div class="stack-side">
-            <span class="stack-year" data-en="May 2025 — Mar 2026">Mai 2025 — Mar 2026</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="stack-item">
-        <div class="stack-card">
-          <div class="stack-num">03</div>
-          <div>
-            <div class="stack-title">
-              <h3 data-en="Instructor &amp; Mentor">Instrutor &amp; Mentor</h3>
-              <span class="role" data-en="Full Stack Training · Live Cohorts">Treinamento Full Stack · Turmas ao Vivo</span>
-            </div>
-            <p class="stack-desc" data-en="Led practical live cohorts (6 to 9 students) focused on algorithmic problem solving (LeetCode), Clean Code, TypeScript, TDD with Jest and Git Flow using Node.js — directly supporting 2 mentees in securing software engineering internships.">Conduzi turmas práticas ao vivo (6 a 9 alunos) com foco em algoritmos (LeetCode), Clean Code, TypeScript, TDD e Git Flow com Node.js, apoiando diretamente 2 mentorados na conquista de estágios na área.</p>
-            <div class="stack-tags">
-              <span>Algorithms</span><span>Clean Code</span><span>TDD</span><span>TypeScript</span><span>Git Flow</span>
-            </div>
-          </div>
-          <div class="stack-side">
-            <span class="stack-year">2025 — 2026</span>
-          </div>
-        </div>
-      </article>
-
+  <!-- ============ MARQUEE 2 ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Pagmus</span><span>//</span><span>SIGA SaaS</span><span>//</span>
+      <span>Pagar.me</span><span>//</span><span>Bling &amp; Notazz</span><span>//</span>
+      <span>UNIPÊ</span><span>//</span><span>João Pessoa · PB</span><span>//</span>
+      <span>Pagmus</span><span>//</span><span>SIGA SaaS</span><span>//</span>
+      <span>Pagar.me</span><span>//</span><span>Bling &amp; Notazz</span><span>//</span>
+      <span>UNIPÊ</span><span>//</span><span>João Pessoa · PB</span><span>//</span>
     </div>
   </div>
-</section>
 
-<!-- ============ CTA ============ -->
-<section class="cta-band">
-  <div class="ghost-word" aria-hidden="true">JEFFSON</div>
-  <div class="container cta-inner">
-    <span class="eyebrow">/contact</span>
-    <div class="cta-words">
-      <div class="fade-up" data-en="Let's build">Vamos construir</div>
-      <div class="fade-up" data-en="the next">o próximo</div>
-      <div class="fade-up" data-en="system.">projeto.</div>
+  <!-- ============ EXPERIENCE (sticky stack) ============ -->
+  <section class="stack-wrap" id="experience">
+    <div class="stack-stage">
+      <div class="stack-head">
+        <div>
+          <span class="eyebrow">/experience</span>
+          <h2 class="h-display h-lg" data-en="Work <span class=&quot;outline&quot;>history</span>">Trajetória <span
+              class="outline">profissional</span></h2>
+        </div>
+        <p class="lede" style="max-width:38ch; font-size:13px;"
+          data-en="Building high-availability backends, responsive SaaS interfaces and mentoring developers.">
+          Construindo backends de alta disponibilidade, interfaces SaaS responsivas e formando desenvolvedores.
+        </p>
+      </div>
+
+      <div class="stack-area">
+
+        <article class="stack-item on">
+          <div class="stack-card">
+            <div class="stack-num">01</div>
+            <div>
+              <div class="stack-title">
+                <h3>Pagmus</h3>
+                <span class="role" data-en="Full Stack Developer">Desenvolvedor Full Stack</span>
+              </div>
+              <p class="stack-desc"
+                data-en="Digital marketing and payment platform intermediating infoproducts and physical goods. Architected layered APIs (Clean Architecture/OOP) in TypeScript/Express supporting up to 5,000 daily sales. Integrated Pagar.me, Bling, Notazz and Correios with real-time Kanban tracking, eliminated Prisma N+1 queries with Redis caching, and configured GitHub Actions CI/CD with Jest before AWS deployment.">
+                Plataforma de pagamentos e marketing digital para infoprodutos e itens físicos. Estruturei APIs em
+                camadas (Clean Architecture/POO) com TypeScript/Express suportando até 5.000 vendas diárias. Integrei
+                Pagar.me, Bling, Notazz e Correios com Kanban em tempo real, eliminei queries N+1 no Prisma aplicando
+                Redis para cache e configurei CI/CD no GitHub Actions com Jest antes do deploy na AWS.</p>
+              <div class="stack-tags">
+                <span>TypeScript</span><span>Express</span><span>Clean
+                  Architecture</span><span>Prisma</span><span>Redis</span><span>AWS</span>
+              </div>
+            </div>
+            <div class="stack-side">
+              <span class="stack-year" data-en="Jul 2025 — Present">Jul 2025 — Presente</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item">
+          <div class="stack-card">
+            <div class="stack-num">02</div>
+            <div>
+              <div class="stack-title">
+                <h3>SIGA</h3>
+                <span class="role" data-en="Frontend Developer">Desenvolvedor Frontend</span>
+              </div>
+              <p class="stack-desc"
+                data-en="HR SaaS platform focused on NR-1 compliance and behavioral occupational risk analysis. Created a responsive no-auth landing page (React/Tailwind) for QR Code onboarding with direct app store links, redesigned the anamnesis form with auto-advance and retroactive editing, and developed 4 mobile-first analytical HR dashboards.">
+                Plataforma SaaS de RH focada em conformidade com a NR-1 e análise comportamental de riscos ocupacionais.
+                Criei landing page no-auth responsiva (React/Tailwind) para cadastro via QR Code eliminando cópia manual
+                de UUIDs, redesenhei o formulário de anamnese com avanço automático e edição retroativa, e desenvolvi 4
+                dashboards analíticos mobile-first integrados a APIs.</p>
+              <div class="stack-tags">
+                <span>React</span><span>Tailwind CSS</span><span>UX/UI Flow</span><span>REST
+                  APIs</span><span>Mobile-First</span>
+              </div>
+            </div>
+            <div class="stack-side">
+              <span class="stack-year" data-en="May 2025 — Mar 2026">Mai 2025 — Mar 2026</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item">
+          <div class="stack-card">
+            <div class="stack-num">03</div>
+            <div>
+              <div class="stack-title">
+                <h3 data-en="Instructor &amp; Mentor">Instrutor &amp; Mentor</h3>
+                <span class="role" data-en="Full Stack Training · Live Cohorts">Treinamento Full Stack · Turmas ao
+                  Vivo</span>
+              </div>
+              <p class="stack-desc"
+                data-en="Led practical live cohorts (6 to 9 students) focused on algorithmic problem solving (LeetCode), Clean Code, TypeScript, TDD with Jest and Git Flow using Node.js — directly supporting 2 mentees in securing software engineering internships.">
+                Conduzi turmas práticas ao vivo (6 a 9 alunos) com foco em algoritmos (LeetCode), Clean Code,
+                TypeScript, TDD e Git Flow com Node.js, apoiando diretamente 2 mentorados na conquista de estágios na
+                área.</p>
+              <div class="stack-tags">
+                <span>Algorithms</span><span>Clean Code</span><span>TDD</span><span>TypeScript</span><span>Git
+                  Flow</span>
+              </div>
+            </div>
+            <div class="stack-side">
+              <span class="stack-year">2025 — 2026</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
-    <a class="cta-mail" href="mailto:jeffsonluiz11@gmail.com">jeffsonluiz11@gmail.com</a>
-    <div class="cta-links">
-      <a href="https://github.com/jeff-ao" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/jeffson-luiz" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://wa.me/5583986596283" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="contact.html" data-transition data-en="Contact page">Página de contato</a>
-      <a href="cv/jeffsonluiz-cv.pdf" download data-en="Download CV">Baixar CV</a>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-band">
+    <div class="ghost-word" aria-hidden="true">JEFFSON</div>
+    <div class="container cta-inner">
+      <span class="eyebrow">/contact</span>
+      <div class="cta-words">
+        <div class="fade-up" data-en="Let's build">Vamos construir</div>
+        <div class="fade-up" data-en="the next">o próximo</div>
+        <div class="fade-up" data-en="system.">projeto.</div>
+      </div>
+      <a class="cta-mail" href="mailto:jeffsonluiz11@gmail.com">jeffsonluiz11@gmail.com</a>
+      <div class="cta-links">
+        <a href="https://github.com/jeff-ao" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jeffson-luiz" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://wa.me/5583986596283" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="contact.html" data-transition data-en="Contact page">Página de contato</a>
+        <a href="cv/jeffsonluiz-cv.pdf" download data-en="Download CV">Baixar CV</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <a class="nav-logo" href="index.html" data-transition>
-    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
-  </a>
-  <div class="footer-copy" data-en="Copyright © 2026 Jeffson Luiz. All Rights Reserved.">Copyright © 2026 Jeffson Luiz. Todos os direitos reservados.</div>
-  <div class="footer-status"><i></i><span data-en="OPEN TO WORK">DISPONÍVEL PARA PROJETOS</span></div>
-</footer>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <a class="nav-logo" href="index.html" data-transition>
+      <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+    </a>
+    <div class="footer-copy" data-en="Copyright © 2026 Jeffson Luiz. All Rights Reserved.">Copyright © 2026 Jeffson
+      Luiz. Todos os direitos reservados.</div>
+    <div class="footer-status"><i></i><span data-en="OPEN TO WORK">DISPONÍVEL PARA PROJETOS</span></div>
+  </footer>
 
-<script src="js/vendor/gsap.min.js"></script>
-<script src="js/vendor/ScrollTrigger.min.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
