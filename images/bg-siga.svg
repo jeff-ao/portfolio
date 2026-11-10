@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <radialGradient id="g1" cx="75%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#0B1528" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#03060C" stop-opacity="1"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#38BDF8" stroke-width="0.7" stroke-opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#03060C"/>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1180" cy="420" r="320" stroke="#38BDF8" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="6 8"/>
+  <circle cx="1180" cy="420" r="460" stroke="#38BDF8" stroke-opacity="0.08" stroke-width="1"/>
+  <text x="900" y="130" fill="#38BDF8" fill-opacity="0.22" font-family="monospace" font-size="15" letter-spacing="4">NR-1 COMPLIANCE // QR CODE ONBOARDING</text>
+  <text x="860" y="790" fill="#64748B" fill-opacity="0.25" font-family="monospace" font-size="14"><AnalyticsDashboard metrics={nr1RiskFactors} mobileFirst={true} /></text>
+</svg>

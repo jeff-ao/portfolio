@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoria Full Stack — Algoritmos, Clean Code &amp; TDD | Jeffson Luiz</title>
+<meta name="description" content="Estudo de caso de Mentoria e Treinamento Prático Full Stack conduzido por Jeffson Luiz: Algoritmos (LeetCode), Clean Code, TypeScript, TDD e Git Flow com Node.js.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="case" data-title-en="Full Stack Mentorship — Algorithms, Clean Code &amp; TDD | Jeffson Luiz">
+
+<div class="grain"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="scroll-progress"><div class="scroll-progress-fill"></div></div>
+
+<nav class="nav" id="site-nav">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" data-transition>/home</a></li>
+    <li><a href="index.html#work" data-transition>/work</a></li>
+    <li><a href="index.html#experience" data-transition>/experience</a></li>
+    <li><a href="about.html" data-page="about" data-transition>/about</a></li>
+    <li><a href="contact.html" data-page="contact" data-transition>/contact</a></li>
+    <li>
+      <button type="button" class="lang-switch" aria-label="Switch language">
+        <span data-lang-opt="pt" class="is-active">PT</span>
+        <span class="sep">/</span>
+        <span data-lang-opt="en">EN</span>
+      </button>
+    </li>
+    <li><a class="nav-cta" href="mailto:jeffsonluiz11@gmail.com" data-en="Let's talk →">Vamos conversar →</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="case-hero">
+  <div class="case-hero-num" aria-hidden="true">03</div>
+  <div class="container">
+    <div class="case-hero-grid">
+      <div>
+        <div class="case-eyebrow" data-en="Technical Leadership · 2025 — 2026">Liderança Técnica · 2025 — 2026</div>
+        <h1 class="case-title" data-split data-en="Full Stack Mentorship — Algorithms, Clean Code &amp; TDD">Mentoria Full Stack — Algoritmos, Clean Code &amp; TDD</h1>
+        <p class="case-hero-desc fade-up" data-en="Practical live training for cohorts of 6 to 9 students focused on algorithmic reasoning (LeetCode), Clean Code, TypeScript, Test-Driven Development (TDD) and Git Flow with Node.js — helping 2 mentees secure internships.">Treinamento prático ao vivo para turmas de 6 a 9 alunos com foco em algoritmos (LeetCode), Clean Code, TypeScript, TDD e Git Flow com Node.js — apoiando diretamente 2 mentorados na conquista de estágios.</p>
+
+        <div class="case-meta-row fade-up">
+          <div><span class="case-meta-label" data-en="Role">Papel</span><span class="case-meta-value" data-en="Instructor &amp; Full Stack Mentor">Instrutor &amp; Mentor Full Stack</span></div>
+          <div><span class="case-meta-label" data-en="Format">Formato</span><span class="case-meta-value" data-en="Live Cohorts (6–9 Students)">Turmas ao Vivo (6 a 9 Alunos)</span></div>
+          <div><span class="case-meta-label">Stack</span><span class="case-meta-value">Node.js · TS · Jest · Git Flow · LeetCode</span></div>
+        </div>
+
+        <div class="case-tags fade-up">
+          <span>Algorithms (LeetCode)</span><span>Clean Code</span><span>TypeScript</span>
+          <span>TDD &amp; Jest</span><span>Git Flow</span><span>Node.js</span><span>Code Review</span>
+        </div>
+
+        <div class="case-stats">
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="9" data-suffix="">9</div>
+            <div class="case-stat-label" data-en="Students per live cohort">Alunos por turma ao vivo</div>
+            <p class="case-stat-desc" data-en="Hands-on live sessions with individualized code reviews, pair programming and algorithmic debugging.">Turmas focadas de 6 a 9 alunos com acompanhamento próximo, code reviews ao vivo e resolução conjunta de algoritmos.</p>
+          </div>
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="2" data-suffix="">2</div>
+            <div class="case-stat-label" data-en="Mentees hired as interns">Mentorados aprovados em estágio</div>
+            <p class="case-stat-desc" data-en="Direct career impact by preparing students for technical interviews, live coding and real engineering workflows.">Impacto direto na carreira apoiando 2 mentorados na conquista de estágios como desenvolvedores.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-hero-phone fade-up">
+        <img src="images/device-mentoria.svg" alt="Trilha de Mentoria Full Stack" data-parallax="10">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NARRATIVE ============ -->
+<section class="container">
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Context">Contexto</div>
+    <div class="case-block-body">
+      <p data-en="Many junior developers learn syntax and frameworks in isolation but struggle when facing algorithmic interviews, collaborative Git workflows, automated testing and architectural standards required by real engineering teams.">Muitos desenvolvedores em início de carreira aprendem sintaxe e frameworks de forma isolada, mas encontram dificuldade ao enfrentar testes de algoritmos em processos seletivos, fluxos colaborativos de Git, testes automatizados e padrões de arquitetura exigidos pelo mercado.</p>
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Methodology">Metodologia</div>
+    <div class="case-block-body">
+      <p class="case-block-sub" data-en="Practical Engineering Simulation &amp; Live Coding">Simulação Real de Engenharia &amp; Live Coding</p>
+      <p class="case-block-desc" data-en="I structured live classes for groups of 6 to 9 students combining algorithmic foundations (LeetCode) with production software practices in Node.js and TypeScript:">Estruturei turmas práticas ao vivo de 6 a 9 alunos combinando raciocínio algorítmico com práticas reais de engenharia de software em Node.js e TypeScript:</p>
+      <ul class="case-list fade-up">
+        <li data-en="Algorithmic problem solving (LeetCode): data structures, complexity analysis and live whiteboard practice">Algoritmos (LeetCode): estruturas de dados, análise de complexidade e resolução comentada ao vivo</li>
+        <li data-en="Clean Code &amp; TypeScript: readable naming, small functions, SOLID principles and strict typing">Clean Code &amp; TypeScript: legibilidade, responsabilidade única, princípios SOLID e tipagem estrita</li>
+        <li data-en="Test-Driven Development (TDD): writing unit tests first in Node.js to design decoupled modules">TDD com Node.js: criação de testes automatizados guiando o design de módulos desacoplados</li>
+        <li data-en="Git Flow: feature branches, Pull Requests, code reviews and conflict resolution as a real squad">Git Flow: branches de feature, Pull Requests, revisão de código e resolução de conflitos em equipe</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="container" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="case-gallery fade-up" data-dots="gal-mentoria">
+    <div class="case-gallery-slide is-active"><img src="images/cases/mentoria-slide-1.svg" alt="Trilha de Algoritmos e LeetCode"></div>
+    <div class="case-gallery-slide"><img src="images/cases/mentoria-slide-2.svg" alt="Clean Code, SOLID e TDD com TypeScript"></div>
+    <div class="case-gallery-slide"><img src="images/cases/mentoria-slide-3.svg" alt="Git Flow e Aprovação em Estágios"></div>
+  </div>
+  <div class="case-gallery-dots" id="gal-mentoria">
+    <button class="is-active" aria-label="Slide 1"></button>
+    <button aria-label="Slide 2"></button>
+    <button aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- ============ UP NEXT ============ -->
+<div class="container">
+  <a class="case-next" href="case-pagmus.html" data-transition>
+    <div>
+      <div class="case-next-label" data-en="Up next">Próximo projeto</div>
+      <div class="case-next-title" data-en="Pagmus — High-Volume Payment &amp; Sales Architecture">Pagmus — Arquitetura de Pagamentos &amp; Alta Escala</div>
+    </div>
+    <span class="case-next-btn"><span data-en="Next project">Ver projeto</span> <span class="arrow-circle">↗</span></span>
+  </a>
+</div>
+
+<footer class="footer">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <div class="footer-copy" data-en="Copyright © 2026 Jeffson Luiz. All Rights Reserved.">Copyright © 2026 Jeffson Luiz. Todos os direitos reservados.</div>
+  <div class="footer-status"><i></i><span data-en="OPEN TO WORK">DISPONÍVEL PARA PROJETOS</span></div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

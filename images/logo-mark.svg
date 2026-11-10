@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" fill="none">
+  <rect x="1" y="1" width="62" height="38" rx="4" fill="#070D19" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M16 14L9 20L16 26" stroke="#38BDF8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 14L55 20L48 26" stroke="#38BDF8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="25" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="1">JL</text>
+</svg>

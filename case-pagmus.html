@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagmus — Arquitetura &amp; Alta Escala | Jeffson Luiz</title>
+<meta name="description" content="Estudo de caso Pagmus: APIs em Clean Architecture com TypeScript/Express suportando até 5.000 vendas diárias, integrações Pagar.me/Bling/Notazz/Correios e otimização Prisma + Redis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="case" data-title-en="Pagmus — High-Volume Architecture | Jeffson Luiz">
+
+<div class="grain"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="scroll-progress"><div class="scroll-progress-fill"></div></div>
+
+<nav class="nav" id="site-nav">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" data-transition>/home</a></li>
+    <li><a href="index.html#work" data-transition>/work</a></li>
+    <li><a href="index.html#experience" data-transition>/experience</a></li>
+    <li><a href="about.html" data-page="about" data-transition>/about</a></li>
+    <li><a href="contact.html" data-page="contact" data-transition>/contact</a></li>
+    <li>
+      <button type="button" class="lang-switch" aria-label="Switch language">
+        <span data-lang-opt="pt" class="is-active">PT</span>
+        <span class="sep">/</span>
+        <span data-lang-opt="en">EN</span>
+      </button>
+    </li>
+    <li><a class="nav-cta" href="mailto:jeffsonluiz11@gmail.com" data-en="Let's talk →">Vamos conversar →</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="case-hero">
+  <div class="case-hero-num" aria-hidden="true">01</div>
+  <div class="container">
+    <div class="case-hero-grid">
+      <div>
+        <div class="case-eyebrow" data-en="Pagmus · Jul 2025 — Present">Pagmus · Jul 2025 — Presente</div>
+        <h1 class="case-title" data-split data-en="Pagmus — High-Volume Payment &amp; Sales Architecture">Pagmus — Arquitetura de Pagamentos &amp; Alta Escala</h1>
+        <p class="case-hero-desc fade-up" data-en="Structuring layered APIs in TypeScript and Express to support up to 5,000 daily sales across digital and physical products, integrating financial gateways, ERPs, logistics and Redis caching.">Estruturação de APIs em camadas com TypeScript e Express para suportar até 5.000 vendas diárias de infoprodutos e itens físicos, integrando gateways financeiros, faturamento, logística e cache em Redis.</p>
+
+        <div class="case-meta-row fade-up">
+          <div><span class="case-meta-label" data-en="Role">Papel</span><span class="case-meta-value" data-en="Full Stack Developer">Desenvolvedor Full Stack</span></div>
+          <div><span class="case-meta-label" data-en="Architecture">Arquitetura</span><span class="case-meta-value">Clean Architecture &amp; POO</span></div>
+          <div><span class="case-meta-label">Stack</span><span class="case-meta-value">TS · Express · Prisma · Redis · AWS</span></div>
+        </div>
+
+        <div class="case-tags fade-up">
+          <span>TypeScript</span><span>Node.js / Express</span><span>Clean Architecture</span>
+          <span>Prisma ORM</span><span>Redis Cache</span><span>GitHub Actions</span><span>Jest</span><span>AWS</span>
+        </div>
+
+        <div class="case-stats">
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="5000" data-suffix="+">5000+</div>
+            <div class="case-stat-label" data-en="Daily sales supported">Vendas diárias suportadas</div>
+            <p class="case-stat-desc" data-en="Resilient layered architecture handling high-concurrency checkout, webhook processing and affiliate splits.">Arquitetura resiliente em camadas lidando com alta concorrência de checkout, webhooks e divisão entre produtores e afiliados.</p>
+          </div>
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="4" data-suffix="">4</div>
+            <div class="case-stat-label" data-en="Core external integrations">Integrações externas críticas</div>
+            <p class="case-stat-desc" data-en="Pagar.me, Bling, Notazz and Correios unified for financial reconciliation, automated invoicing and real-time Kanban tracking.">Pagar.me, Bling, Notazz e Correios unificados para conciliação financeira, emissão fiscal e rastreio em tempo real via Kanban.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-hero-phone fade-up">
+        <img src="images/device-pagmus.svg" alt="Painel de arquitetura e Kanban da Pagmus" data-parallax="10">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NARRATIVE ============ -->
+<section class="container">
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Context">Contexto</div>
+    <div class="case-block-body">
+      <p data-en="Pagmus is a payments and digital marketing platform that intermediates sales of infoproducts and physical goods between producers and affiliates. With rapid transaction growth, the platform needed a backend capable of sustaining spikes of up to 5,000 daily orders without latency or data inconsistency.">A Pagmus é uma plataforma de pagamentos e marketing digital que intermedia vendas de infoprodutos e itens físicos entre produtores e afiliados. Com o crescimento acelerado de transações, a operação exigia uma base técnica capaz de sustentar picos de até 5.000 vendas diárias sem latência ou inconsistência financeira.</p>
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Problem">Problema</div>
+    <div class="case-block-body">
+      <p data-en="High transaction concurrency and multiple external dependencies created bottlenecks in reporting, database queries and deployment confidence:">A alta concorrência de transações e múltiplas integrações externas geravam desafios críticos de performance, rastreabilidade e segurança de deploy:</p>
+      <ul class="case-list fade-up">
+        <li data-en="Relational N+1 query bottlenecks in Prisma ORM slowing down financial dashboards and heavy reports">Gargalos de consultas relacionais (queries N+1) no Prisma ORM que impactavam o carregamento de relatórios pesados</li>
+        <li data-en="Need to synchronize payment splits (Pagar.me), ERP/invoicing (Bling, Notazz) and shipping (Correios) in real time">Necessidade de sincronizar conciliação financeira (Pagar.me), faturamento (Bling, Notazz) e logística (Correios) em tempo real</li>
+        <li data-en="Lack of automated pre-deploy validation to prevent regressions in critical checkout and webhook flows">Risco de regressões em fluxos críticos de pagamento antes do deploy em produção na AWS</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Solution">Solução</div>
+    <div class="case-block-body">
+      <p class="case-block-sub" data-en="Clean Architecture, Redis Caching &amp; Automated CI/CD">Clean Architecture, Cache em Redis &amp; CI/CD Automatizado</p>
+      <p class="case-block-desc" data-en="I structured the APIs in decoupled layers (Clean Architecture &amp; OOP) using TypeScript and Express, refactored relational Prisma queries to eliminate N+1 patterns, introduced Redis caching for heavy reports and messaging, integrated Pagar.me, Bling, Notazz and Correios into a real-time Kanban board, and built GitHub Actions pipelines running Jest unit tests on every PR.">Estruturei as APIs em camadas desacopladas (Clean Architecture e POO) com TypeScript e Express, refatorei consultas relacionais no Prisma eliminando queries N+1, apliquei Redis para cache de relatórios pesados e mensagens, integrei Pagar.me, Bling, Notazz e Correios em um Kanban em tempo real e configurei pipelines no GitHub Actions com testes unitários em Jest a cada PR.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="container">
+  <div class="case-statement fade-up">
+    <p data-en="Engineering high-availability payment APIs for <em>5,000+ daily transactions</em> with Clean Architecture &amp; Redis">Engenharia de APIs de alta disponibilidade para <em>5.000+ vendas diárias</em> com Clean Architecture &amp; Redis</p>
+    <div class="case-statement-media">
+      <img src="images/device-pagmus.svg" alt="Arquitetura Pagmus" data-parallax="8">
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="container" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="case-gallery fade-up" data-dots="gal-pagmus">
+    <div class="case-gallery-slide is-active"><img src="images/cases/pagmus-slide-1.svg" alt="Clean Architecture e Alta Escala na Pagmus"></div>
+    <div class="case-gallery-slide"><img src="images/cases/pagmus-slide-2.svg" alt="Integrações Pagar.me, Bling, Notazz e Correios"></div>
+    <div class="case-gallery-slide"><img src="images/cases/pagmus-slide-3.svg" alt="CI/CD com GitHub Actions, Jest e AWS"></div>
+  </div>
+  <div class="case-gallery-dots" id="gal-pagmus">
+    <button class="is-active" aria-label="Slide 1"></button>
+    <button aria-label="Slide 2"></button>
+    <button aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- ============ MY ROLE ============ -->
+<section class="container section-tight" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="section-head">
+    <span class="eyebrow">/my role</span>
+    <h2 class="h-display h-md" data-split data-en="End-to-end Full Stack Engineering">Engenharia Full Stack ponta a ponta</h2>
+    <p class="lede fade-up" data-en="Direct ownership over backend architecture, third-party integrations, database performance and CI/CD automation.">Atuação direta na arquitetura de APIs, integrações financeiras e logísticas, performance de banco de dados e automação de deploy.</p>
+  </div>
+
+  <div class="grid-3">
+    <div class="mini-card fade-up"><h4 data-en="Layered Architecture">Arquitetura em Camadas</h4><p data-en="Designed Clean Architecture &amp; OOP modules in TypeScript/Express isolating domain rules from external frameworks.">Estruturação em Clean Architecture e POO com TypeScript/Express, isolando regras de negócio de infraestrutura.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="Financial Reconciliation">Conciliação Financeira</h4><p data-en="Integrated Pagar.me for payment processing, split rules and automated financial reconciliation.">Integração com Pagar.me para processamento de pagamentos, split entre produtores/afiliados e conciliação.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="ERP &amp; Invoice Automation">Automação Fiscal &amp; ERP</h4><p data-en="Connected Bling and Notazz to automate invoice generation and inventory synchronization.">Integração dos serviços Bling e Notazz para emissão automatizada de notas fiscais e gestão de pedidos.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="Real-Time Kanban &amp; Shipping">Kanban &amp; Rastreio em Tempo Real</h4><p data-en="Integrated Correios tracking into a real-time Kanban workflow for physical product fulfillment.">Integração com Correios exibindo o status e rastreio de encomendas em tempo real via quadro Kanban.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="Prisma &amp; Redis Optimization">Otimização Prisma &amp; Redis</h4><p data-en="Eliminated N+1 queries in relational models and cached heavy analytical reports and messages in Redis.">Eliminação de queries N+1 em consultas relacionais no Prisma e cache de relatórios pesados via Redis.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="CI/CD &amp; Unit Testing">CI/CD &amp; Testes Unitários</h4><p data-en="Configured GitHub Actions pipelines running Jest test suites on every PR before deploying to AWS.">Configuração de pipelines no GitHub Actions com suíte de testes em Jest a cada PR antes do deploy na AWS.</p></div>
+  </div>
+</section>
+
+<!-- ============ MY PROCESS ============ -->
+<section class="container" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="section-head">
+    <span class="eyebrow">/my process</span>
+    <h2 class="h-display h-md" data-split data-en="From domain modeling to AWS deploy">Da modelagem de domínio ao deploy na AWS</h2>
+  </div>
+
+  <div class="grid-4">
+    <div class="mini-card fade-up">
+      <div class="mini-num">01</div>
+      <h4 data-en="Domain &amp; Clean Arch">Domínio &amp; Clean Arch</h4>
+      <p data-en="Defined entities, use cases, repositories and adapters in TypeScript to handle up to 5,000 daily orders cleanly.">Definição de entidades, casos de uso e repositórios em TypeScript para sustentar até 5.000 vendas/dia.</p>
+    </div>
+    <div class="mini-card fade-up">
+      <div class="mini-num">02</div>
+      <h4 data-en="Query &amp; Cache Tuning">Tuning de Banco &amp; Cache</h4>
+      <p data-en="Audited Prisma relational queries to remove N+1 bottlenecks and implemented Redis caching layers.">Auditoria de queries relacionais no Prisma para remover N+1 e implementação de camada de cache com Redis.</p>
+    </div>
+    <div class="mini-card fade-up">
+      <div class="mini-num">03</div>
+      <h4 data-en="Ecosystem Orchestration">Orquestração de Integrações</h4>
+      <p data-en="Unified Pagar.me, Bling, Notazz and Correios webhooks with real-time Kanban visibility.">Unificação de webhooks e APIs da Pagar.me, Bling, Notazz e Correios com visualização Kanban em tempo real.</p>
+    </div>
+    <div class="mini-card fade-up">
+      <div class="mini-num">04</div>
+      <h4 data-en="Automated Quality Gate">Quality Gate Automatizado</h4>
+      <p data-en="Enforced Jest unit tests on every Pull Request via GitHub Actions prior to AWS production release.">Execução obrigatória de testes unitários em Jest via GitHub Actions a cada PR antes do deploy na AWS.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UP NEXT ============ -->
+<div class="container">
+  <a class="case-next" href="case-siga.html" data-transition>
+    <div>
+      <div class="case-next-label" data-en="Up next">Próximo projeto</div>
+      <div class="case-next-title" data-en="SIGA — NR-1 HR SaaS &amp; Analytical Dashboards">SIGA — SaaS de RH NR-1 &amp; Dashboards Analíticos</div>
+    </div>
+    <span class="case-next-btn"><span data-en="Next project">Ver projeto</span> <span class="arrow-circle">↗</span></span>
+  </a>
+</div>
+
+<footer class="footer">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <div class="footer-copy" data-en="Copyright © 2026 Jeffson Luiz. All Rights Reserved.">Copyright © 2026 Jeffson Luiz. Todos os direitos reservados.</div>
+  <div class="footer-status"><i></i><span data-en="OPEN TO WORK">DISPONÍVEL PARA PROJETOS</span></div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

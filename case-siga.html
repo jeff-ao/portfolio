@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGA — SaaS de RH &amp; Conformidade NR-1 | Jeffson Luiz</title>
+<meta name="description" content="Estudo de caso SIGA: Plataforma SaaS de RH focada em conformidade com a NR-1, onboarding via QR Code em React/Tailwind, formulário de anamnese otimizado e 4 dashboards analíticos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="case" data-title-en="SIGA — NR-1 HR SaaS &amp; Dashboards | Jeffson Luiz">
+
+<div class="grain"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="scroll-progress"><div class="scroll-progress-fill"></div></div>
+
+<nav class="nav" id="site-nav">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" data-transition>/home</a></li>
+    <li><a href="index.html#work" data-transition>/work</a></li>
+    <li><a href="index.html#experience" data-transition>/experience</a></li>
+    <li><a href="about.html" data-page="about" data-transition>/about</a></li>
+    <li><a href="contact.html" data-page="contact" data-transition>/contact</a></li>
+    <li>
+      <button type="button" class="lang-switch" aria-label="Switch language">
+        <span data-lang-opt="pt" class="is-active">PT</span>
+        <span class="sep">/</span>
+        <span data-lang-opt="en">EN</span>
+      </button>
+    </li>
+    <li><a class="nav-cta" href="mailto:jeffsonluiz11@gmail.com" data-en="Let's talk →">Vamos conversar →</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="case-hero">
+  <div class="case-hero-num" aria-hidden="true">02</div>
+  <div class="container">
+    <div class="case-hero-grid">
+      <div>
+        <div class="case-eyebrow" data-en="SIGA · May 2025 — Mar 2026">SIGA · Mai 2025 — Mar 2026</div>
+        <h1 class="case-title" data-split data-en="SIGA — NR-1 HR SaaS &amp; Behavioral Analytics">SIGA — SaaS de RH NR-1 &amp; Análise Comportamental</h1>
+        <p class="case-hero-desc fade-up" data-en="Frontend engineering and UX optimization for an HR SaaS platform focused on NR-1 occupational risk compliance: QR Code onboarding, smart auto-advancing anamnesis flow and 4 mobile-first analytical dashboards.">Engenharia Frontend e otimização de UX para plataforma SaaS de RH focada em conformidade com a NR-1: onboarding via QR Code sem cópia manual de UUIDs, fluxo inteligente de anamnese e 4 dashboards analíticos mobile-first.</p>
+
+        <div class="case-meta-row fade-up">
+          <div><span class="case-meta-label" data-en="Role">Papel</span><span class="case-meta-value" data-en="Frontend Developer">Desenvolvedor Frontend</span></div>
+          <div><span class="case-meta-label" data-en="Focus">Foco</span><span class="case-meta-value" data-en="Onboarding UX, Forms &amp; Analytics">Onboarding UX, Formulários &amp; Dashboards</span></div>
+          <div><span class="case-meta-label">Stack</span><span class="case-meta-value">React · Tailwind CSS · REST APIs</span></div>
+        </div>
+
+        <div class="case-tags fade-up">
+          <span>React</span><span>Tailwind CSS</span><span>QR Code Onboarding</span>
+          <span>UX Optimization</span><span>Mobile-First</span><span>Analytical Dashboards</span>
+        </div>
+
+        <div class="case-stats">
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="4" data-suffix="">4</div>
+            <div class="case-stat-label" data-en="Analytical HR dashboards">Dashboards analíticos de RH</div>
+            <p class="case-stat-desc" data-en="Integrated with REST APIs to display real-time NR-1 occupational risk metrics with mobile-first responsiveness and visual loading states.">Integrados a APIs para exibição de métricas de risco ocupacional NR-1 com design mobile-first e feedbacks visuais de carregamento e ação.</p>
+          </div>
+          <div class="case-stat fade-up">
+            <div class="case-stat-number" data-value="0" data-suffix=" UUIDs">0 UUIDs</div>
+            <div class="case-stat-label" data-en="Manual copy-pasting eliminated">Cópia manual eliminada</div>
+            <p class="case-stat-desc" data-en="Replaced manual UUID input with a responsive no-auth QR Code landing page and direct app store links.">Substituição da cópia manual de UUIDs por uma landing page no-auth responsiva com cadastro via QR Code e links diretos das lojas de apps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-hero-phone fade-up">
+        <img src="images/device-siga.svg" alt="Interface e Dashboards da plataforma SIGA" data-parallax="10">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NARRATIVE ============ -->
+<section class="container">
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Context">Contexto</div>
+    <div class="case-block-body">
+      <p data-en="SIGA is an HR SaaS platform focused on compliance with Brazil's NR-1 standard, performing behavioral analysis for occupational risk management. Employees and HR managers needed a frictionless experience from first access to analytical risk monitoring.">O SIGA é uma plataforma SaaS de RH focada em conformidade com a norma NR-1, realizando análise comportamental para gerenciamento de riscos ocupacionais. Colaboradores e gestores de RH precisavam de uma jornada fluida desde o primeiro acesso até a leitura estratégica dos indicadores.</p>
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Problem">Problema</div>
+    <div class="case-block-body">
+      <p data-en="Friction in user onboarding and questionnaire completion was hurting adoption and slowing down HR decision-making:">Atritos no onboarding de usuários e no preenchimento do questionário comportamental prejudicavam a experiência e o tempo de resposta:</p>
+      <ul class="case-list fade-up">
+        <li data-en="Users had to manually copy and paste complex UUIDs during registration and app download">Usuários precisavam copiar e colar manualmente UUIDs complexos durante o cadastro e transição para o aplicativo</li>
+        <li data-en="The behavioral anamnesis form required repetitive clicks on every question and lacked easy retroactive editing">O formulário de anamnese exigia cliques repetitivos a cada pergunta e dificultava a revisão ou edição retroativa de respostas</li>
+        <li data-en="HR managers needed clear, mobile-accessible dashboards to visualize NR-1 behavioral metrics in real time">Gestores de RH precisavam visualizar métricas complexas de conformidade NR-1 em dispositivos móveis e desktop com feedback imediato</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="case-block">
+    <div class="case-block-label" data-split data-en="Solution">Solução</div>
+    <div class="case-block-body">
+      <p class="case-block-sub" data-en="QR Code Onboarding, Smart Auto-Advance Form &amp; 4 Dashboards">Onboarding QR Code, Anamnese Inteligente &amp; 4 Dashboards</p>
+      <p class="case-block-desc" data-en="I built a responsive no-auth landing page in React and Tailwind CSS enabling instant registration via QR Code and direct App Store / Google Play links. Next, I redesigned the anamnesis questionnaire with automatic progression on option select, reverse navigation and retroactive editing. Finally, I developed 4 mobile-first analytical dashboards integrated with backend APIs.">Criei uma landing page no-auth responsiva em React e Tailwind CSS para cadastro via QR Code com links diretos das lojas de apps, eliminando a cópia manual de UUIDs. Redesenhei o formulário de anamnese com avanço automático ao selecionar opções, navegação reversa e edição retroativa, e desenvolvi 4 dashboards analíticos mobile-first integrados a APIs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="container">
+  <div class="case-statement fade-up">
+    <p data-en="Eliminating onboarding friction and turning <em>NR-1 behavioral data</em> into actionable HR dashboards">Eliminando fricção no onboarding e transformando <em>dados comportamentais NR-1</em> em decisões visuais</p>
+    <div class="case-statement-media">
+      <img src="images/device-siga.svg" alt="SIGA SaaS Dashboards" data-parallax="8">
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="container" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="case-gallery fade-up" data-dots="gal-siga">
+    <div class="case-gallery-slide is-active"><img src="images/cases/siga-slide-1.svg" alt="Onboarding via QR Code no SIGA"></div>
+    <div class="case-gallery-slide"><img src="images/cases/siga-slide-2.svg" alt="Formulário inteligente de anamnese"></div>
+    <div class="case-gallery-slide"><img src="images/cases/siga-slide-3.svg" alt="4 Dashboards analíticos de RH NR-1"></div>
+  </div>
+  <div class="case-gallery-dots" id="gal-siga">
+    <button class="is-active" aria-label="Slide 1"></button>
+    <button aria-label="Slide 2"></button>
+    <button aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- ============ MY ROLE ============ -->
+<section class="container section-tight" style="padding-bottom:clamp(50px,8vw,90px);">
+  <div class="section-head">
+    <span class="eyebrow">/my role</span>
+    <h2 class="h-display h-md" data-split data-en="Frontend Architecture &amp; Product UX">Arquitetura Frontend &amp; UX de Produto</h2>
+    <p class="lede fade-up" data-en="Translating regulatory NR-1 workflows into fast, accessible React and Tailwind interfaces.">Transformando fluxos regulatórios da NR-1 em interfaces rápidas, responsivas e intuitivas em React e Tailwind CSS.</p>
+  </div>
+
+  <div class="grid-3">
+    <div class="mini-card fade-up"><h4 data-en="No-Auth QR Landing Page">Landing Page No-Auth QR</h4><p data-en="Created a responsive React/Tailwind entry point that binds sessions via QR Code and links directly to app stores.">Criação de página responsiva em React/Tailwind para cadastro via QR Code e redirecionamento direto às lojas de apps.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="Smart Form State">Estado Inteligente de Formulário</h4><p data-en="Engineered auto-advance on selection, backward history navigation and non-destructive retroactive answer editing.">Implementação de avanço automático ao selecionar opções, navegação reversa e edição retroativa sem perda de estado.</p></div>
+    <div class="mini-card fade-up"><h4 data-en="4 Analytical Dashboards">4 Dashboards Analíticos</h4><p data-en="Built 4 specialized data views consuming REST APIs to surface behavioral and occupational risk indicators.">Desenvolvimento de 4 painéis analíticos integrados a APIs para exibição de indicadores de RH e riscos ocupacionais.</p></div>
+  </div>
+</section>
+
+<!-- ============ UP NEXT ============ -->
+<div class="container">
+  <a class="case-next" href="case-mentoria.html" data-transition>
+    <div>
+      <div class="case-next-label" data-en="Up next">Próximo projeto</div>
+      <div class="case-next-title" data-en="Full Stack Mentorship — Algorithms, Clean Code &amp; TDD">Mentoria Full Stack — Algoritmos, Clean Code &amp; TDD</div>
+    </div>
+    <span class="case-next-btn"><span data-en="Next project">Ver projeto</span> <span class="arrow-circle">↗</span></span>
+  </a>
+</div>
+
+<footer class="footer">
+  <a class="nav-logo" href="index.html" data-transition>
+    <span class="code-mark">&lt;JL /&gt;</span> JEFFSON LUIZ
+  </a>
+  <div class="footer-copy" data-en="Copyright © 2026 Jeffson Luiz. All Rights Reserved.">Copyright © 2026 Jeffson Luiz. Todos os direitos reservados.</div>
+  <div class="footer-status"><i></i><span data-en="OPEN TO WORK">DISPONÍVEL PARA PROJETOS</span></div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+

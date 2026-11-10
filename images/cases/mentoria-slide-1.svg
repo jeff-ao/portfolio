@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#060B14"/>
+  <rect x="40" y="40" width="1120" height="720" rx="16" fill="#09101D" stroke="#1E293B" stroke-width="2"/>
+  <text x="110" y="140" fill="#3B82F6" font-family="monospace" font-weight="700" font-size="15" letter-spacing="4">01 // ALGORITHMS & PROBLEM SOLVING</text>
+  <text x="110" y="210" fill="#FFFFFF" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="36">Live LeetCode & Data Structures Training</text>
+  <line x1="110" y1="260" x2="1090" y2="260" stroke="#1E293B" stroke-width="2"/>
+  
+  <rect x="110" y="360" width="980" height="64" rx="8" fill="#0D1627" stroke="#1E293B"/>
+  <rect x="110" y="360" width="6" height="64" rx="3" fill="#3B82F6"/>
+  <text x="144" y="398" fill="#38BDF8" font-family="monospace" font-weight="700" font-size="16">01</text>
+  <text x="190" y="398" fill="#F8FAFC" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="18">Small Cohorts (6 to 9 Students)</text>
+
+  <rect x="110" y="442" width="980" height="64" rx="8" fill="#0D1627" stroke="#1E293B"/>
+  <rect x="110" y="442" width="6" height="64" rx="3" fill="#3B82F6"/>
+  <text x="144" y="480" fill="#38BDF8" font-family="monospace" font-weight="700" font-size="16">02</text>
+  <text x="190" y="480" fill="#F8FAFC" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="18">Time & Space Complexity Analysis</text>
+
+  <rect x="110" y="524" width="980" height="64" rx="8" fill="#0D1627" stroke="#1E293B"/>
+  <rect x="110" y="524" width="6" height="64" rx="3" fill="#3B82F6"/>
+  <text x="144" y="562" fill="#38BDF8" font-family="monospace" font-weight="700" font-size="16">03</text>
+  <text x="190" y="562" fill="#F8FAFC" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="18">Live Debugging & Whiteboarding</text>
+
+  <rect x="110" y="606" width="980" height="64" rx="8" fill="#0D1627" stroke="#1E293B"/>
+  <rect x="110" y="606" width="6" height="64" rx="3" fill="#3B82F6"/>
+  <text x="144" y="644" fill="#38BDF8" font-family="monospace" font-weight="700" font-size="16">04</text>
+  <text x="190" y="644" fill="#F8FAFC" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="18">Technical Interview Preparation</text>
+
+</svg>
